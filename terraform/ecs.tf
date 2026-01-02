@@ -7,7 +7,7 @@ resource "aws_ecs_service" "fastapi-app" {
   cluster         = aws_ecs_cluster.fastapi-app.id
   task_definition = aws_ecs_task_definition.fastapi-app.arn
   desired_count   = var.desired_count
-  launch_type     = "FARGATE"
+  rm -rf [providers](http://_vscodecontentref_/2)  launch_type     = "FARGATE"
 
   network_configuration {
     subnets          = data.aws_subnets.default.ids
