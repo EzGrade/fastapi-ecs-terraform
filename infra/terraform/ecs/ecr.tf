@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "fastapi-ecs" {
-  name                 = "fastapi-ecs-repo"
+  name                 = "${var.app_name}"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {

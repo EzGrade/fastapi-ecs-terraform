@@ -8,16 +8,6 @@ resource "aws_lb" "fastapi-ecs" {
 
   enable_deletion_protection = false
 
-  depends_on = [
-    aws_s3_bucket.alb_logs
-  ]
-
-  access_logs {
-    bucket  = aws_s3_bucket.alb_logs.id
-    prefix  = "${var.app_name}/alb"
-    enabled = true
-  }
-
   tags = {
     Name = "${var.app_name}-alb"
   }
